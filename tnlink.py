@@ -7,7 +7,7 @@ def tnlink(url:str):
     url = url[:-1] if url[-1] == '/' else url
     token = url.split("/")[-1]
     client = requests.Session()
-    ref = "https://market.finclub.in/"   
+    ref = "https://jrlinks.in/"   
     domain = "https://go.tnshort.net/"
     h = {"referer": ref} 
     response = client.get(domain+token, headers=h)
