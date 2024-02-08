@@ -8,7 +8,7 @@ def try2link(url):
     token = url.split('/')[-1]
     Domain = 'https://try2link.com/'
     client = rsession()
-    resp = client.get(Domain+token, headers={"referer": 'https://trip.businessnews-nigeria.com/'})
+    resp = client.get(Domain+token, headers={"referer": 'https://to-travel.net/'})
     soup = BeautifulSoup(resp.content, "html.parser")
     inputs = soup.find(id="go-link").find_all(name="input")
     data = { input.get('name'): input.get('value') for input in inputs }
